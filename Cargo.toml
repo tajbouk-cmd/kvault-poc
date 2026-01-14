@@ -3,3 +3,6 @@ members = [
     "programs/kvault-poc"
 ]
 
+[profile.release]
+overflow-checks = true
+
