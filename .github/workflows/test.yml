@@ -20,7 +20,7 @@ jobs:
 
       - name: Install Solana CLI
         run: |
-          curl -sSfL https://release.solana.com/stable/install | sh
+          curl -sSfL https://install.solana.com | sh
           echo "$HOME/.local/share/solana/install/active_release/bin" >> $GITHUB_PATH
           solana --version
 
