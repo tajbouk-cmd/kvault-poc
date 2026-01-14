@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("KVault111111111111111111111111111111111");
+declare_id!("9Ub23SJJRWWXRtPYEk57xwS98k73dWeXok9fpHbHjzYT");
 
 #[program]
 pub mod kvault_poc {
