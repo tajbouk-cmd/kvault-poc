@@ -1,5 +1,5 @@
 [programs.localnet]
-kvault_poc = "KVault111111111111111111111111111111111"
+kvault_poc = "9Ub23SJJRWWXRtPYEk57xwS98k73dWeXok9fpHbHjzYT"
 
 [provider]
 cluster = "localnet"
@@ -7,4 +7,3 @@ wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "mocha -t 1000000 tests/"
-
