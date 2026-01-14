@@ -24,11 +24,12 @@ jobs:
           echo "$HOME/.local/share/solana/install/active_release/bin" >> $GITHUB_PATH
 
       - name: Install Anchor
-        run: cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked
+        run: |
+          cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
       - name: Build programs
         run: anchor build
 
       - name: Run PoC tests
-        run: cargo test --tests -- --nocapture
-
+        run: anchor test
