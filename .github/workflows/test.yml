@@ -20,8 +20,8 @@ jobs:
 
       - name: Install Solana CLI
         run: |
-          sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
-          export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+          curl -sSfL https://release.solana.com/stable/install | sh
+          echo "$HOME/.local/share/solana/install/active_release/bin" >> $GITHUB_PATH
           solana --version
 
       - name: Install Anchor
