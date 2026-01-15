@@ -1,7 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("4HL9RfQX8p1xHaApJG2D1zVJ9ZGfDW9EkEwSQMmDE37M");
-
+declare_id!("3Yo3P5GdTDPTaa6ZNebawVUACLXqW1nB6MhAH5TX1s5z");
 
 #[program]
 pub mod kvault_poc {
@@ -15,4 +14,3 @@ pub mod kvault_poc {
 
 #[derive(Accounts)]
 pub struct Initialize {}
-
