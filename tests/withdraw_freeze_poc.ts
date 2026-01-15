@@ -4,7 +4,6 @@ import { KvaultPoc } from "../target/types/kvault_poc";
 import { assert } from "chai";
 
 describe("withdraw_freeze_poc", () => {
-  // Configure the client to use the local cluster
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
@@ -12,12 +11,19 @@ describe("withdraw_freeze_poc", () => {
 
   it("Triggers NotEnoughLiquidityDisinvestedToSendToUser error", async () => {
     try {
-      // Attempt to withdraw liquidity without enough funds
       await program.methods
-        .initialize() // or replace with withdraw method if available
+        .withdraw(new anchor.BN(1000))
         .accounts({
-          // fill in with actual accounts from your IDL
           user: provider.wallet.publicKey,
+          vault: anchor.web3.PublicKey.findProgramAddressSync(
+            [Buffer.from("vault")],
+            program.programId
+          )[0],
+          pool: anchor.web3.PublicKey.findProgramAddressSync(
+            [Buffer.from("pool")],
+            program.programId
+          )[0],
+          systemProgram: anchor.web3.SystemProgram.programId,
         })
         .rpc();
 
