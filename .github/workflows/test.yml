@@ -24,9 +24,13 @@ jobs:
         run: |
           sh -c "$(curl -sSfL https://release.solana.com/v1.18.17/install)"
 
-      - name: Install Anchor
+      - name: Install Anchor CLI
         run: |
           cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked
+
+      - name: Install cargo-build-sbf
+        run: |
+          cargo install cargo-build-sbf
 
       - name: Sync program keys
         run: anchor keys sync
