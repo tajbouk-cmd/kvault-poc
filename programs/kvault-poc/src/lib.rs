@@ -1,6 +1,7 @@
 use anchor_lang::prelude::*;
 
-declare_id!("9Ub23SJJRWWXRtPYEk57xwS98k73dWeXok9fpHbHjzYT");
+declare_id!("4HL9RfQX8p1xHaApJG2D1zVJ9ZGfDW9EkEwSQMmDE37M");
+
 
 #[program]
 pub mod kvault_poc {
